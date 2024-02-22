@@ -1,0 +1,159 @@
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.blocks-left{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 200px;
+    width: 415px;
+}
+
+.blocks-right{
+    position: absolute;
+    top: 0px;
+    left: 415px;
+    right: 0px;
+    height: 200px;
+}
+
+
+.blocks-left .block-title{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    right: 5px;
+    height: 90px;
+}
+.block-title p{
+    margin: 10px;
+    font-size: 28px;
+    color: #45a1bd;
+}
+.block-title span{
+    position: absolute;
+    bottom: 4px;
+    left: 10px;
+    color: #888888;
+    font-size: 14px;
+}
+
+
+.blocks-left .block-info{
+    position: absolute;
+    left: 10px;
+    right: 5px;
+    top: 100px;
+    bottom: 5px;
+}
+
+.block-info .info-unit{
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    height: 100%;
+    width: 95px;
+}
+.info-unit .info-unit-header{
+    padding-left: 4px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #eeeeee 1px solid;
+}
+.info-unit .info-unit-body{
+    position: relative;
+    height: 65px;
+    text-align: center;
+}
+.info-unit p{
+    position: absolute;
+    right: 35px;
+    display: block;
+    bottom: 21px;
+    font-size: 22px;
+    color: #45a1bd;
+}
+.info-unit span{
+    position: absolute;
+    left: 60px;
+    bottom: 22px;
+    display: block;
+    color: #777777;
+}
+
+.blocks-right .block-btns{
+    position: absolute;
+    margin: 0px;
+    top: 5px;
+    left: 5px;
+    right: 10px;
+    height: 190px;
+}
+
+.block-btns .layui-tab-content{
+    position: relative;
+    height: 149px;
+    padding: 0px;
+}
+.block-btns .btns-btn{
+    display: block;
+    float: left;
+    margin-left: 30px;
+    margin-top: 95px;
+    height: 40px;
+    width: 120px;
+    border: #cccccc 1px solid;
+    border-radius: 1px;
+    background-color: #ffffff00;
+    color: #555555;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.block-btns .btns-desc{
+    position: absolute;
+    display: block;
+    height: 75px;
+    top: 0px;
+    left: 30px;
+    right: 30px;
+    color: #555555;
+    padding-top: 5px;
+    border-bottom: #cccccc 1px dashed;
+}
+
+.btns-btn:hover{
+    border: #45a1bd 1px solid;
+    box-shadow: #c7eefa 0px 0px 5px;
+    transition: 0.4s;
+}
+
+.btns-btn i{
+    margin-right: 5px;
+}
+
+.block-table{
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    right: 10px;
+    height: 680px;
+}
+
+.block-bottom{
+    position: relative;
+    top: 885px;
+    height: 10px;
+    width: 100%;
+    background-image: linear-gradient(#ffffff00, #c7eefa);
+}
+
+
+.popl-showcol{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

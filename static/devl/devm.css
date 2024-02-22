@@ -1,0 +1,461 @@
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.toolbox{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 10px;
+    height: 100px;
+    user-select: none;
+}
+
+
+.leftcard{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 16px;
+    height: 100%;
+    width: 800px;
+}
+.leftcard p{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 24px;
+    color: #45a1bd;
+}
+.leftcard input{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    height: 24px;
+    width: 220px;
+    font-size: 16px;
+    border-radius: 1px;
+    padding-left: 4px;
+    color: #666;
+    border: #aaaaaa 1px solid;
+}
+.leftcard input:focus{
+    outline: #45a1bd46 3px solid;
+}
+.leftcard button{
+    position: absolute;
+    left: 240px;
+    bottom: 10px;
+    width: 120px;
+    height: 26px;
+    color: #666;
+    border: #45a1bd 1px solid;
+    background-color: #fff;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.leftcard button i{
+    margin-right: 5px;
+}
+.leftcard button:hover{
+    background-color: #45a1bd;
+    color: #fff;
+    transition: 0.3s;
+    outline: #45a1bd46 3px solid;
+}
+
+.leftcard .toggle{
+    margin: 5px;
+    float: right;
+    height: 90px;
+    width: 130px;
+    line-height: 90px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+}
+.leftcard .toggle i{
+    font-size: 22px;
+    margin-right: 5px;
+    color: #45a1bd;
+}
+.leftcard .toggle:hover{
+    background-color: #eee;
+    transition: 0.3s;
+}
+.leftcard .catch{
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.rightcard{
+    position: absolute;
+    left: 805px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+.rightcard .ntbtn{
+    margin: 5px;
+    float: left;
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    cursor: pointer;
+    text-align: center;
+    color: #666;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+}
+.rightcard .ntbtn i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.rightcard .ntbtn:hover{
+    background-color: #eee;
+    transition: 0.3s;
+}
+.rightcard #newn{
+    display: none;
+}
+.rightcard #deln{
+    display: none;
+}
+.rightcard #sumbn{
+    display: none;
+}
+
+
+.tablebox{
+    position: absolute;
+    margin: 0px;
+    left: 10px;
+    right: 10px;
+    top: 110px;
+    bottom: 5px;
+    display: block;
+}
+.tablebox #sheet{
+    position: absolute;
+    padding: 0px;
+    left: 0px;
+    right: 0px;
+    top: 40px;
+    bottom: 0px;
+    font-size: 14px;
+}
+.tablebox .sheet-bar span{
+    font-size: 16px;
+}
+.tablebox .sheet-bar input{
+    position: absolute;
+    left: 80px;
+    top: 2px;
+    width: 160px;
+}
+
+#sheet ul{
+    position: relative;
+    display: flex;
+    height: 38px;
+    border-bottom: #eeeeee 1px solid;
+    background-color: #fff;
+}
+#sheet ul li{
+    position: relative;
+    display: block;
+    flex-shrink: 1;
+    width: 11%;
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#sheet .sheet-split{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 5px;
+    height: 100%;
+}
+#sheet .sheet-split::after{
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: 1px;
+    height: 100%;
+    background-color: #eeeeee;
+}
+.sheet-head .sheet-split{
+    cursor: e-resize;
+}
+#sheet .sheet-head{
+    position: absolute;
+    left: 0px;
+    right: 15px;
+    height: 38px;
+    border-top: #eeeeee 1px solid;
+    font-weight: 600;
+    user-select: none;
+}
+#sheet .sheet-body{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 39px;
+    bottom: 0px;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+#sheet .sheet-body ul:hover{
+    background-color: #45a1bd2e;
+}
+#sheet .delbar{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    background-color: #b95e5e;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#sheet .delbar:hover{
+    width: 80px;
+    transition: 0.2s;
+}
+#sheet .delbar:hover::before{
+    content: '删除';
+}
+
+
+
+.sedmvbox{
+    position: absolute;
+    margin: 0px;
+    left: 10px;
+    right: 10px;
+    top: 110px;
+    bottom: 5px;
+    display: none;
+}
+.sedmvbox .sedmv-head{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    border-bottom: #eee 1px solid;
+}
+.sedmvbox .sedmv-project{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 41px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.sedmv-project .sedmv-item{
+    position: relative;
+    display: flex;
+    height: 120px;
+    margin: 10px;
+    color: #666;
+    /* background-color: #f8f8f8; */
+    /* background-color: #bd45450f; */
+    background-color: #45a1bd0f;
+    white-space: none;
+}
+.sedmv-project .sedmv-item-new{
+    top: 50%;
+}
+
+.sedmv-item-del .arrow-icons:hover{
+    color: #bd4545;
+    cursor: pointer;
+    outline: #bd4545 1px solid;
+}
+
+
+.sedmv-item .editbtn{
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    top: 5px;
+    right: 5px;
+    color: #45a1bd;
+    cursor: pointer;
+}
+
+
+.sedmv-item .device{
+    position: relative;
+    flex: 1;
+    height: 100px;
+    margin: 10px;
+    min-width: 400px;
+}
+.device .device-img{
+    position: absolute;
+    left: 0px;
+    height: 100px;
+    width: 100px;
+    border: #aaaaaa 1px dashed;
+}
+.device .device-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.device .device-opt{
+    position: absolute;
+    left: 102px;
+    right: 0px;
+    padding-left: 5px;
+    background-color: #fff;
+    height: 100%;
+}
+.device .device-opt li{
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+}
+.device .device-opt label{
+    position: absolute;
+    left: 0px;
+    width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-weight: 600;
+    color: #aaaaaa;
+}
+.device .device-opt span{
+    position: absolute;
+    left: 65px;
+}
+
+
+
+.sedmv-item .arrow{
+    position: relative;
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    min-width: 320px;
+    height: 100px;
+    background-color: #fff;
+}
+.arrow .arrow-source{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    min-width: 120px;
+    
+}
+.arrow .arrow-alter{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    min-width: 120px;
+}
+.arrow .arrow-icons{
+    position: relative;
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 100px;
+    min-width: 80px;
+    font-size: 28px;
+}
+.arrow label{
+    position: absolute;
+    display: block;
+    top: 0px;
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    font-weight: 600;
+    color: #aaaaaa;
+    text-align: center;
+}
+.arrow span{
+    position: absolute;
+    top: 20px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 6px;
+    font-weight: 600;
+}
+
+
+
+.sedmv-item .reason{
+    position: relative;
+    flex: 1;
+    margin: 10px;
+    height: 100px;
+    min-width: 200px;
+    background-color: #fff;
+}
+.reason label{
+    line-height: 100px;
+    font-weight: 600;
+    color: #aaaaaa;
+}
+.reason textarea{
+    position: absolute;
+    resize: none;
+    border: 0px;
+    padding: 5px;
+    line-height: 20px;
+    left: 65px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: #666;
+    border: #aaaaaa 1px dashed;
+}
+
+.popl-sedmv-edit{
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.popl-table-edit{
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 0px;
+    bottom: 0px;
+}
+.popl-table-edit input{
+    background-color: #fafafa;
+}
+
+#popl-sedmv-findsel{
+    position: absolute;
+    top: 155px;
+    bottom: 5px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow:  #45a1bd 0px 0px 5px;
+}

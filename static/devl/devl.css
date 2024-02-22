@@ -1,0 +1,500 @@
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.toolbox{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 10px;
+    height: 100px;
+    user-select: none;
+}
+
+
+
+.leftcard{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 16px;
+    height: 100%;
+    width: 900px;
+}
+.leftcard p{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 24px;
+    color: #45a1bd;
+}
+.leftcard input{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    height: 24px;
+    width: 220px;
+    font-size: 16px;
+    border-radius: 1px;
+    padding-left: 4px;
+    color: #555;
+    border: #aaaaaa 1px solid;
+}
+.leftcard select{
+    position: absolute;
+    left: 240px;
+    bottom: 10px;
+    width: 120px;
+    height: 26px;
+    border: #45a1bd 1px solid;
+    background-color: #fff;
+    border-radius: 1px;
+}
+.leftcard button{
+    position: absolute;
+    left: 370px;
+    bottom: 10px;
+    width: 120px;
+    height: 26px;
+    border: #45a1bd 1px solid;
+    background-color: #fff;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.leftcard button i{
+    margin-right: 5px;
+}
+.leftcard button:hover{
+    background-color: #45a1bd;
+    color: #fff;
+    transition: 0.3s;
+    outline: #45a1bd46 3px solid;
+}
+.leftcard input:focus{
+    outline: #45a1bd46 2px solid;
+}
+
+
+
+.leftcard .toggle{
+    margin: 5px;
+    float: right;
+    height: 90px;
+    width: 130px;
+    line-height: 90px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+}
+.leftcard .toggle i{
+    font-size: 22px;
+    margin-right: 5px;
+    color: #45a1bd;
+}
+.leftcard .toggle:hover{
+    background-color: #eee;
+    transition: 0.3s;
+}
+.leftcard .catch{
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+
+
+.rightcard{
+    position: absolute;
+    left: 905px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+.rightcard .ntbtn{
+    margin: 5px;
+    float: left;
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    cursor: pointer;
+    text-align: center;
+    color: #555;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+}
+.rightcard .ntbtn i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.rightcard .ntbtn:hover{
+    background-color: #eee;
+    transition: 0.3s;
+}
+.rightcard #tbedit{
+    display: none;
+}
+.rightcard #tbnew{
+    display: none;
+}
+.rightcard #tbdel{
+    display: none;
+}
+
+
+
+.tablebox{
+    position: absolute;
+    margin: 0px;
+    left: 10px;
+    right: 10px;
+    top: 110px;
+    bottom: 5px;
+    display: block;
+}
+.tablebox .sheet-sel{
+    position: absolute;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    border-bottom: #eee 0.8px solid;
+}
+.tablebox .sheet-sel ul{
+    position: absolute;
+    padding: 3px;
+    top: 40px;
+    width: 250px;
+    height: 300px;
+    z-index: 1001;
+    background-color: #fff;
+    box-shadow: #dfdfdf 0px 0px 2px 2px;
+    border-radius: 1px;
+    z-index: 1002;
+    user-select: none;
+    overflow: auto;
+    display: none;
+}
+.tablebox .sheet-sel:hover ul{
+    display: block;
+}
+.tablebox .sheet-sel li{
+    padding-left: 10px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.tablebox .sheet-sel li:hover{
+    color: #45a1bd;
+    background-color: #eee;
+}
+.tablebox .sheet-bar{
+    position: absolute;
+    left: 40px;
+    right: 0px;
+    background-color: #fff;
+}
+.sheet-bar li{
+    float: left;
+    background-color: #45a1bd;
+    color: #fff;
+    border-top: #45a1bd 1px solid;
+}
+.sheet-bar .layui-this{
+    color: #45a1bd;
+    background-color: #fff;
+    border-top: #45a1bd 2px solid;
+    text-decoration: underline;
+}
+
+
+
+.tablebox .sheet{
+    position: absolute;
+    padding: 0px;
+    left: 0px;
+    right: 0px;
+    top: 40px;
+    bottom: 0px;
+    font-size: 14px;
+}
+.sheet ul{
+    position: relative;
+    display: block;
+    height: 38px;
+    border-bottom: #eeeeee 1px solid;
+    background-color: #fff;
+    white-space: nowrap;
+    display: flex;
+}
+.sheet ul li{
+    position: relative;
+    display: block;
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    width: 11%;
+}
+.sheet ul li:first-child{
+    width: 60px;
+    flex: none;
+}
+.sheet .sheet-split{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 5px;
+    height: 100%;
+}
+.sheet .sheet-split::after{
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: 1px;
+    height: 100%;
+    background-color: #eeeeee;
+}
+.sheet-head .sheet-split{
+    cursor: e-resize;
+}
+.sheet .sheet-head{
+    position: absolute;
+    left: 0px;
+    right: 15px;
+    height: 38px;
+    border-top: #eeeeee 1px solid;
+    font-weight: 600;
+    user-select: none;
+}
+.sheet .sheet-body{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 39px;
+    bottom: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.sheet .sheet-body ul:hover{
+    background-color: #45a1bd2e;
+}
+
+
+
+.sheet .sheet-body .onlinebar{
+    position: relative;
+    padding-left: 5px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+    width: 100%;
+    background-color: #eeeeee;
+    color: #45a1bd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sheet .sheet-body .onlinebar:hover{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 40%;
+    font-size: 16px;
+    background-color: #45a1bd;
+    color: #fff;
+    transition: 0.2s;
+}
+.sheet .sheet-body .onlinebar:hover::before{
+    content: "上线:选择表格位置";
+}
+
+.sheet .sheet-body .offlinebar{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    background-color: #b95e5e;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sheet .sheet-body .offlinebar:hover{
+    width: 110px;
+    transition: 0.2s;
+}
+.sheet .sheet-body .offlinebar:hover::before{
+    content: '下线:选择设备 ';
+}
+
+.sheet .sheet-body .movebar{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    background-color: #45bd7b;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sheet .sheet-body .movebar:hover{
+    width: 110px;
+    transition: 0.2s;
+}
+.sheet .sheet-body .movebar:hover::before{
+    content: '移动:选择设备 ';
+}
+
+.sheet .sheet-body .movebar2{
+    position: relative;
+    padding-left: 5px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+    width: 100%;
+    background-color: #eeeeee;
+    color: #45bd7b;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sheet .sheet-body .movebar2:hover{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 40%;
+    font-size: 16px;
+    background-color: #45bd7b;
+    color: #fff;
+    transition: 0.2s;
+}
+.sheet .sheet-body .movebar2:hover::before{
+    content: "移动:选择表格位置";
+}
+
+.sheet .sheet-body .replasebar_m{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #45bd7b;
+    background-color: #dfdfdf;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sheet .sheet-body .replasebar_m:hover{
+    width: 150px;
+    transition: 0.2s;
+    color: #fff;
+    background-color: #45bd7b;
+}
+.sheet .sheet-body .replasebar_m:hover::before{
+    content: "移动:替换该设备";
+}
+
+.sheet .sheet-body .replasebar_o{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #45a1bd;
+    background-color: #dfdfdf;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sheet .sheet-body .replasebar_o:hover{
+    width: 150px;
+    transition: 0.2s;
+    color: #fff;
+    background-color: #45a1bd;
+}
+.sheet .sheet-body .replasebar_o:hover::before{
+    content: "上线:替换该设备";
+}
+
+
+
+.popl-ntbtns-item{
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+}
+.popl-ntbtns-item label{
+    position: absolute;
+    left: 5px;
+    font-weight: 600;
+    color: #555;
+}
+.popl-ntbtns-item span{
+    position: absolute;
+    left: 60px;
+}
+
+
+
+.popl-devinfo{
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 0px;
+    bottom: 0px;
+}
+.popl-devinfo input{
+    background-color: #fafafa;
+}
+
+
+#newpopl-findsel{
+    position: absolute;
+    top: 155px;
+    bottom: 5px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow:  #dfdfdf 0px 0px 3px;
+}
+
+
+.fa-list{
+    position: absolute;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: #45a1bd;
+}
+/* .layui-icon-set{
+    display: block;
+    color: #aaaaaa;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.layui-icon-set:hover{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-size: 32px;
+    transition: 0.3s;
+} */
